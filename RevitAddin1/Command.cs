@@ -27,12 +27,6 @@ namespace RevitAddin1
             Document doc = uidoc.Document;
             
 
-            using (Transaction tx = new Transaction(doc))
-            {
-                tx.Start("Transaction Name");
-                tx.Commit();
-            }
-
             TaskDialog.Show("Hello", "This is my first command Add-in");
 
             return Result.Succeeded;
